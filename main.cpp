@@ -1,6 +1,7 @@
 #include <iostream>
 #include <string>
-#include <cstdlib>
+#include <algorithm>
+
 #define MAX 100
 
 // this prints text
@@ -23,7 +24,7 @@ int main() //main function
     {
         array[i] = rand();
     }
-    
+    Print("Unsorted");
     // outputting the unsorted array
     for (int i = 0; i < n; i++)
     {
@@ -31,23 +32,7 @@ int main() //main function
     }
     Print("\n");
 
-    // sorting an array
-    for (int i = 0; i < n; i++)
-    {
-        for (int j = i+1; j < n; j++)
-        {
-            // asscending order
-            if (array[j]<array[i])
-            {
-                int temp = array[i];
-                array[i] = array[j];
-                array[j] = temp;
-            }
-            
-        }
-        
-    }
-    
+    std::sort(array, array+n);
     // display the sorted array
     Print("Sorted");
     for (int i = 0; i < n; i++)
@@ -56,6 +41,5 @@ int main() //main function
     }
     std::cout << std::endl;
     
-
     return 0;  
 }
