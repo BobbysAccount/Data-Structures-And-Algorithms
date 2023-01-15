@@ -1,6 +1,7 @@
 #include <iostream>
 #include <string>
 
+// this prints text
 void Print(std::string phrase)
 {
     std::cout << phrase << std::endl;
