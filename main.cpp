@@ -1,16 +1,17 @@
 #include <iostream>
 #include <string>
 
-void NumDisplay(std::string phrase, int num2)
+void Print(std::string phrase)
 {
-    std::cout << phrase << num2 << std::endl;
+    std::cout << phrase << std::endl;
 }
+
 
 int main() //main function
 {
 
     
-    NumDisplay("My favourite number ", 23);
+    Print("My favourite number\n");
     
 
     return 0;  
